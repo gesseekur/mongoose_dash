@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>All Bunnies</title>
+</head>
+<body>
+	<h1>Bunny Friends </h1>
+	<a href="/bunny/new"><button>Make a new friend!</button></a>
+	<% for (var x in bunny) { %>
+	<p><b>Name:</b><a href="/bunny/<%=bunny[x].id%>"><%= bunny[x].name %></a></p>
+	<p>Age:<%= bunny[x].age %></p>
+	<p>Hobbies:<%= bunny[x].hobbies %></p>
+	<a href="/bunny/<%=bunny[x].id%>/edit"><button>Edit my info</button></a>
+	<a href="/bunny/<%=bunny[x].id%>/destroy"><button>Byebye:-(</button></a>
+	<% } %>
+
+	
+</body>
+</html>

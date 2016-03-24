@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Edit a bunny friend!</title>
+</head>
+<body>
+	<h1>Edit <%= bunny.name %>'s Info</h1>
+	<form method="post" action="/bunny/<%= bunny.id %>">
+		<p>Name:<input type="text" name="name" placeholder="<%= bunny.name%>"></p>
+		<p>Age:<input type="number" name="age" placeholder="<%= bunny.age%>"></p>
+		<p>Hobbies:<input type="text" name="hobbies" placeholder="<%= bunny.hobbies%>"></p>
+		<input type="submit" value="Update">
+	</form>
+	<a href="/"><button>Go back to see my bunny friends!</button></a>
+</body>
+</html>
